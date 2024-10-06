@@ -17,7 +17,7 @@ function Login() {
     setError(null);
     setResponse(null);
 
-    const api_url =  process.env.REACT_APP_API_URL ||  "http://localhost:7777";
+    const api_url =  import.meta.env.REACT_APP_API_URL ||  "http://localhost:7777";
 
     try {
       const res = await axios.post(`${api_url}/api/users/login`, {
