@@ -21,7 +21,7 @@ function Register() {
     setResponse(null);
 
     const api_url =
-      /* process.env.REACT_APP_API_URL || */ "http://localhost:7777";
+       process.env.VITE_APP_API_URL ||  "http://localhost:7777";
 
     try {
       const res = await axios.post(`${api_url}/api/users/register`, {

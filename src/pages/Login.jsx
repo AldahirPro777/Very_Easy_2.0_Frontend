@@ -17,7 +17,7 @@ function Login() {
     setError(null);
     setResponse(null);
 
-    const api_url =  import.meta.env.REACT_APP_API_URL ||  "http://localhost:7777";
+    const api_url =  import.meta.env.VITE_APP_API_URL ||  "http://localhost:7777";
 
     try {
       const res = await axios.post(`${api_url}/api/users/login`, {
@@ -41,7 +41,7 @@ function Login() {
     <div className="login-div-body">
       <div className="form">
         <form onSubmit={handleSubmit}>
-          <h1>ALV</h1>
+          <h1>Login</h1>
           <div className="inputs">
             <input
               type="text"
