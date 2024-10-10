@@ -132,6 +132,12 @@ body::-webkit-scrollbar {
   border: 2px solid #f8fafc;
   color: #f8fafc;
 }
+.home-div-body .myv {
+  text-align: center;
+}
+.home-div-body .myv li {
+  list-style: none;
+}
 .home-div-body .card strong {
   color: #e6398f;
 }
@@ -152,6 +158,7 @@ body::-webkit-scrollbar {
 }
 .home-div-body .contribuir {
   text-align: center;
+  padding: 10px;
 }
 .home-div-body .custom-shape-divider-bottom-1725404578 {
   position: absolute;

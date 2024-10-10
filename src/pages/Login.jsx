@@ -8,7 +8,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
- 
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -25,11 +25,15 @@ function Login() {
         password,
       });
 
+      // Guardar el token en localStorage
       localStorage.setItem("token", res.data.token);
 
-      setResponse(res.data);
-      setError(null);
+      // Limpiar los campos de entrada
+      setUserName("");
+      setPassword("");
 
+      // Almacenar la respuesta y navegar al dashboard
+      setResponse(res.data);
       navigate("/sub-pages/dashboard");
     } catch (err) {
       setError(err.response?.data?.message || "Error al iniciar sesión");
@@ -49,6 +53,7 @@ function Login() {
               placeholder="Nombre de Usuario"
               onChange={(e) => setUserName(e.target.value)}
               className="inp1"
+              required
             />
 
             <input
@@ -56,16 +61,17 @@ function Login() {
               value={password}
               placeholder="Contraseña"
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 
           <button type="submit">Login</button>
 
           <a className="btn-register" href="/register">
-            Registarse
+            Regístrate
           </a>
 
-          {response && <p>{JSON.stringify(response.message)}</p>}
+          {response && <p className="success">{response.message}</p>}
 
           {error && <p className="error">{error}</p>}
         </form>

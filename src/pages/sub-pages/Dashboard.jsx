@@ -54,7 +54,7 @@ function Dashboard() {
     <div className="dashboard-div-body">
       <main id="dashboard">
         <Navbar />
-        <Welcome name={name} genero={!genero} />
+        <Welcome name={name} genero={genero} />
         <CardsPendientes />
         <InfoEscolar />
         <CalendarAux />

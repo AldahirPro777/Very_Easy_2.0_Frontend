@@ -141,6 +141,14 @@ body::-webkit-scrollbar {
     color: #f8fafc;
   }
 
+  .myv {
+    text-align: center;
+
+    li {
+      list-style: none;
+    }
+  }
+
   .card strong {
     color: #e6398f;
   }
@@ -164,6 +172,7 @@ body::-webkit-scrollbar {
 
   .contribuir {
     text-align: center;
+    padding: 10px;
   }
 
   .custom-shape-divider-bottom-1725404578 {

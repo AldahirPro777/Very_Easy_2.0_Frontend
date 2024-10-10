@@ -45,20 +45,19 @@ function Home() {
               <h3>Visión y Misión</h3>
             </div>
             <div className="card-body">
-              <ul>
+              <ul className="myv">
                 <li>
-                  <strong>Misión: </strong>Mi misión es motivar y ayudar a todos
-                  mis compañeros para que alcancen la excelencia a través de una
-                  plataforma innovadora y compleja. Very Easy centraliza
-                  recursos, tareas y colaboración, creando un entorno de
-                  aprendizaje que promueve el desarrollo personal y gestion de
-                  tiempo.
+                  <strong>Misión: </strong>Motivar y ayudar a todos para que
+                  alcancen sus metas a través de una plataforma innovadora y
+                  compleja. Very Easy centraliza recursos, tareas y
+                  colaboración, creando un entorno de aprendizaje que promueve
+                  el desarrollo personal y gestion de tiempo.
                 </li>
                 <li>
-                  <strong>Visión: </strong>Veo al proyecto como una herramienta
-                  esencial para mis compañeros que puede ayudarlos en su camino,
-                  facilitando y centralizando recursos de alto valor en un solo
-                  lugar.
+                  <strong>Visión: </strong>El proyecto se aprecia como una
+                  herramienta esencial para todos, que puede ayudar en diversos
+                  caminos, facilitando y centralizando recursos de alto valor en
+                  un solo lugar.
                 </li>
               </ul>
             </div>
@@ -111,9 +110,8 @@ function Home() {
                   alertas para no olvidar fechas importantes.
                 </li>
                 <li>
-                  <strong>Información personalizada:</strong> Con la gran
-                  variedad de los recursos disponibles no tendars que gastar
-                  tiempo buscando mas
+                  <strong>Información personalizada:</strong> Con los recursos
+                  disponibles no tendars que gastar tiempo buscando más
                 </li>
               </ul>
             </div>

@@ -20,6 +20,12 @@ function Register() {
     setError(null);
     setResponse(null);
 
+    // Validación básica para verificar que las contraseñas coinciden
+    if (password !== password2) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
+
     const api_url = import.meta.env.VITE_APP_API_URL;
 
     try {
@@ -27,9 +33,15 @@ function Register() {
         name,
         userName,
         password,
-        password2,
         genero,
       });
+
+      // Limpiar campos después del registro exitoso
+      setName("");
+      setUserName("");
+      setPassword("");
+      setPassword2("");
+      setGenero(null);
 
       setResponse(res.data);
       setError(null);
@@ -50,38 +62,42 @@ function Register() {
             value={name}
             placeholder="Nombre"
             onChange={(e) => setName(e.target.value)}
+            required
           />
           <input
             type="text"
             value={userName}
             placeholder="Usuario"
             onChange={(e) => setUserName(e.target.value)}
+            required
           />
           <input
-            type="text"
+            type="password"
             value={password}
-            placeholder="contraseña"
+            placeholder="Contraseña"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <input
             type="password"
             value={password2}
-            placeholder="**********"
+            placeholder="Repite la contraseña"
             onChange={(e) => setPassword2(e.target.value)}
+            required
           />
         </div>
 
         <div className="genero">
           <button
             type="button"
-            className="btn-genero hombre"
+            className={`btn-genero hombre ${genero === true ? "active" : ""}`}
             onClick={() => setGenero(true)}
           >
             Hombre
           </button>
           <button
             type="button"
-            className="btn-genero mujer"
+            className={`btn-genero mujer ${genero === false ? "active" : ""}`}
             onClick={() => setGenero(false)}
           >
             Mujer
@@ -89,14 +105,14 @@ function Register() {
         </div>
 
         <button className="btn-register" type="submit">
-          Register
+          Registrarse
         </button>
 
         <a className="btn-login" href="/login">
-          Login
+          Iniciar sesión
         </a>
 
-        {response && <p>{JSON.stringify(response.message)}</p>}
+        {response && <p className="success">{response.message}</p>}
 
         {error && <p className="error">{error}</p>}
       </form>
