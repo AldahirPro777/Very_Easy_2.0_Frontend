@@ -50,7 +50,7 @@ function Cumpleaños() {
 
   return (
     <section id="cumpleaños">
-      <h1>Siguiente Cumpleañera</h1>
+      <h1>Siguiente Cumpleañero</h1>
       <h2 className="cumple hombre">Jared</h2>
       <h3>11 de Octubre</h3>
       <button
