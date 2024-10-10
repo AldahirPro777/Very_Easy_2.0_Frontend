@@ -14,11 +14,21 @@
     font-size: 15vw;
     font-weight: bold;
     text-align: center;
-    background: linear-gradient(90deg, #ff7eb3, #ffb8d4);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glowing 1.5s infinite alternate;
+
+    /* Estilos para hombre */
+    &.hombre {
+      background: linear-gradient(90deg, #00c6ff, #0072ff); // Colores azulados
+    }
+
+    /* Estilos para mujer */
+    &.mujer {
+      background: linear-gradient(90deg, #ff7eb3, #ffb8d4); // Colores rosados
+    }
+
     text-shadow: 0 0 10px rgba(255, 127, 193, 0.7),
       0 0 20px rgba(255, 127, 193, 0.5);
   }
@@ -42,10 +52,8 @@
     cursor: pointer;
     position: absolute;
     margin-top: 500px;
-  }
 
-  @media (min-width: 700px) {
-    .canvas-confetti-btn {
+    @media (min-width: 700px) {
       margin-top: 700px;
     }
   }
@@ -66,18 +74,18 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     color: rgb(100, 100, 100);
-  }
 
-  .tool-tip:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    margin-left: -8px;
-    bottom: -5px;
-    background-color: #fff;
-    transform: rotate(45deg);
-    width: 10px;
-    height: 10px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      bottom: -5px;
+      background-color: #fff;
+      transform: rotate(45deg);
+      width: 10px;
+      height: 10px;
+    }
   }
 
   .canvas-confetti-btn:hover .tool-tip {

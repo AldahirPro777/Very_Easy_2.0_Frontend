@@ -13,12 +13,19 @@
   font-size: 15vw;
   font-weight: bold;
   text-align: center;
-  background: linear-gradient(90deg, #ff7eb3, #ffb8d4);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glowing 1.5s infinite alternate;
+  /* Estilos para hombre */
+  /* Estilos para mujer */
   text-shadow: 0 0 10px rgba(255, 127, 193, 0.7), 0 0 20px rgba(255, 127, 193, 0.5);
+}
+#cumpleaños .cumple.hombre {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+#cumpleaños .cumple.mujer {
+  background: linear-gradient(90deg, #ff7eb3, #ffb8d4);
 }
 @keyframes glowing {
   0% {
@@ -58,7 +65,7 @@
   font-size: 1rem;
   color: rgb(100, 100, 100);
 }
-#cumpleaños .tool-tip:after {
+#cumpleaños .tool-tip::after {
   content: "";
   position: absolute;
   left: 50%;
