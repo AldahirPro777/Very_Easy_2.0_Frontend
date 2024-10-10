@@ -236,9 +236,9 @@ function Home() {
               para seguir disfrutando de todas las{" "}
               <strong>herramientas y recursos</strong> 📚 que tengo para ti 🚀.
             </p>
-            <a onClick={() => headleGoToLogin} className="btn-login">
+            <button onClick={() => headleGoToLogin} className="btn-login">
               👉 Iniciar Sesión 🔓
-            </a>
+            </button>
           </div>
           <div className="register">
             <h2>ㅤ🎉 ¡Únete a la Exelencia!ㅤ</h2>
@@ -248,9 +248,9 @@ function Home() {
               <strong>funcionalidades</strong> 🚀 que tengo para ti y hacer que
               la escuela sea aún más easy 4 u.
             </p>
-            <a onClick={() => headleGoToRegister} className="btn-register">
+            <button onClick={() => headleGoToRegister} className="btn-register">
               ✨ Registrarse 👈
-            </a>
+            </button>
           </div>
         </section>
       </main>
