@@ -1,6 +1,18 @@
 import "../scss/home/home.scss";
 
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
+
+  const headleGoToLogin = () => {
+    navigate("/Login");
+  };
+
+  const headleGoToRegister = () => {
+    navigate("/Register");
+  };
+
   return (
     <div className="home-div-body">
       <main>
@@ -224,7 +236,7 @@ function Home() {
               para seguir disfrutando de todas las{" "}
               <strong>herramientas y recursos</strong> 📚 que tengo para ti 🚀.
             </p>
-            <a href="/login" className="btn-login">
+            <a onClick={() => headleGoToLogin} className="btn-login">
               👉 Iniciar Sesión 🔓
             </a>
           </div>
@@ -236,7 +248,7 @@ function Home() {
               <strong>funcionalidades</strong> 🚀 que tengo para ti y hacer que
               la escuela sea aún más easy 4 u.
             </p>
-            <a href="/register" className="btn-register">
+            <a onClick={() => headleGoToRegister} className="btn-register">
               ✨ Registrarse 👈
             </a>
           </div>
