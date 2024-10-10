@@ -22,14 +22,16 @@
   z-index: -1;
 }
 .navbar .a-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70px;
-  height: 70px;
   border-radius: 100%;
 }
 .navbar .a-img img {
-  width: 100%;
+  width: 70%;
 }
-.navbar .a-img:hover {
+.navbar .a-img img:hover {
   cursor: pointer;
 }
 .navbar nav {
@@ -64,7 +66,8 @@
   display: none;
   cursor: pointer;
 }
-.navbar .icons #close-icon, .navbar .icons #menu-icon {
+.navbar .icons #close-icon,
+.navbar .icons #menu-icon {
   width: 40px;
 }
 @media (max-width: 992px) {

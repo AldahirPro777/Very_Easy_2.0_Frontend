@@ -1,0 +1,38 @@
+.sub-pages-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+.sub-pages-body h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.sub-pages-body button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.sub-pages-body button:hover {
+  background-color: #0056b3;
+}
+.sub-pages-body .selected {
+  background-color: #0056b3;
+  pointer-events: none;
+}
+.sub-pages-body p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+}/*# sourceMappingURL=adminPanel.css.map */

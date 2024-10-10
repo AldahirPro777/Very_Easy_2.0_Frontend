@@ -19,8 +19,7 @@ function StudyResources() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const api_url =
-          /* process.env.VITE_APP_API_URL || */ "http://localhost:7516";
+        const api_url = import.meta.env.VITE_APP_API_URL;
 
         const res = await axios.get(
           `${api_url}/api/studyResources/getResources`
@@ -45,7 +44,7 @@ function StudyResources() {
         <h1>Recursos De Estudio</h1>
         {error ? (
           <p>Mensaje de error: {error.message}</p>
-        ) : data ? (
+        ) : data.length > 0 ? (
           <div className="container">
             <RenderCards data={data} />
           </div>
