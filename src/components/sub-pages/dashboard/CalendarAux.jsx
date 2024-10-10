@@ -32,11 +32,11 @@ function CalendarAux() {
             <li>9</li>
             <li>
               10 <br />
-              🎂
+              🎂🌟
             </li>
-            <li>
+            <li className="today">
               11 <br />
-              🎂🌟📚📝
+              🎂📚📝
             </li>
             <li>
               12 <br />

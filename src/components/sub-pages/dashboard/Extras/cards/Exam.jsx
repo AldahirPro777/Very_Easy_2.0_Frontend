@@ -17,7 +17,7 @@ function Exam({ exams }) {
       {exams.map((exam, i) => (
         <div key={i} className="card card-exam">
           <div className="card-head">
-            <h2>- {exam.title} -</h2>
+            <h2>{exam.title}</h2>
           </div>
           <div className="card-body">
             <p>

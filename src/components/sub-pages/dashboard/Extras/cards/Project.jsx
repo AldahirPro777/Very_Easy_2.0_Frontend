@@ -17,7 +17,7 @@ function Project({ projects }) {
       {projects.map((project, i) => (
         <div key={i} className="card card-project">
           <div className="card-head">
-            <h2>- {project.title} -</h2>
+            <h2>{project.title}</h2>
           </div>
           <div className="card-body">
             <p className="descripcion">
