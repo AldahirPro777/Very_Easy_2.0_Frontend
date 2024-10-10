@@ -18,7 +18,6 @@ import "../../scss/sub-pages/dashboard/dashboard.css";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
-  const [error, setError] = useState(null);
 
   const navigate = useNavigate();
 
@@ -27,7 +26,6 @@ function Dashboard() {
       const token = localStorage.getItem("token");
 
       if (!token) {
-        setError("No se encontró el token. Por favor, inicia sesión");
         navigate("/login");
         return;
       }
@@ -42,9 +40,7 @@ function Dashboard() {
         });
 
         setUser(response.data);
-        setError(null);
       } catch (err) {
-        setError("Error al cargar los datos del dashboard.");
         console.error(err);
       }
     };
@@ -57,21 +53,13 @@ function Dashboard() {
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
-        {/* {error ? (
-          <p className="error">{error}</p>
-        ) : user ? (
-          <> */}
         <Navbar />
-        <Welcome name={name} genero={genero} />
+        <Welcome name={name} genero={!genero} />
         <CardsPendientes />
         <InfoEscolar />
         <CalendarAux />
         <Cumpleañero />
-        {/*   <Footer />
-          </>
-        ) : (
-          <p>Cargando datos del usuario...</p>
-        )} */}
+        <Footer />
       </main>
     </div>
   );

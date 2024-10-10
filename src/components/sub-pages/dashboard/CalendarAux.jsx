@@ -20,7 +20,7 @@ function CalendarAux() {
 
             <li className="firts-day">
               1 <br />
-              🌟🎂
+              🎂
             </li>
             <li>2 </li>
             <li>3 </li>
@@ -36,7 +36,7 @@ function CalendarAux() {
             </li>
             <li>
               11 <br />
-              🎂🌟
+              🎂🌟📚
             </li>
             <li>
               12 <br />
