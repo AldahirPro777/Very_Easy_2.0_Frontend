@@ -5,6 +5,30 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* .cumple {
+    font-size: 15vw;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff7eb3, #ffb8d4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowing 1.5s infinite alternate;
+    text-shadow: 0 0 10px rgba(255, 127, 193, 0.7),
+      0 0 20px rgba(255, 127, 193, 0.5);
+  }
+
+  @keyframes glowing {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 127, 193, 0.7),
+        0 0 20px rgba(255, 127, 193, 0.5);
+    }
+
+    100% {
+      text-shadow: 0 0 40px rgba(255, 127, 193, 1),
+        0 0 30px rgba(255, 127, 193, 0.8);
+    }
+  } */
 }
 #cumpleaños h1 {
   font-size: 8vw;
@@ -13,26 +37,19 @@
   font-size: 15vw;
   font-weight: bold;
   text-align: center;
+  background: linear-gradient(90deg, #7eb3ff, #b8d4ff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glowing 1.5s infinite alternate;
-  /* Estilos para hombre */
-  /* Estilos para mujer */
-  text-shadow: 0 0 10px rgba(255, 127, 193, 0.7), 0 0 20px rgba(255, 127, 193, 0.5);
-}
-#cumpleaños .cumple.hombre {
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-}
-#cumpleaños .cumple.mujer {
-  background: linear-gradient(90deg, #ff7eb3, #ffb8d4);
+  text-shadow: 0 0 10px rgba(127, 193, 255, 0.7), 0 0 20px rgba(127, 193, 255, 0.5);
 }
 @keyframes glowing {
   0% {
-    text-shadow: 0 0 10px rgba(255, 127, 193, 0.7), 0 0 20px rgba(255, 127, 193, 0.5);
+    text-shadow: 0 0 10px rgba(127, 193, 255, 0.7), 0 0 20px rgba(127, 193, 255, 0.5);
   }
   100% {
-    text-shadow: 0 0 40px rgb(255, 127, 193), 0 0 30px rgba(255, 127, 193, 0.8);
+    text-shadow: 0 0 40px rgb(127, 193, 255), 0 0 30px rgba(127, 193, 255, 0.8);
   }
 }
 #cumpleaños .canvas-confetti-btn {
@@ -65,7 +82,7 @@
   font-size: 1rem;
   color: rgb(100, 100, 100);
 }
-#cumpleaños .tool-tip::after {
+#cumpleaños .tool-tip:after {
   content: "";
   position: absolute;
   left: 50%;

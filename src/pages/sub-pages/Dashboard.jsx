@@ -57,21 +57,21 @@ function Dashboard() {
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
-        {error ? (
+        {/* {error ? (
           <p className="error">{error}</p>
         ) : user ? (
-          <>
-            <Navbar />
-            <Welcome name={name} genero={genero} />
-            <CardsPendientes />
-            <InfoEscolar />
-            <CalendarAux />
-            <Cumpleañero />
-            <Footer />
+          <> */}
+        <Navbar />
+        <Welcome name={name} genero={genero} />
+        <CardsPendientes />
+        <InfoEscolar />
+        <CalendarAux />
+        <Cumpleañero />
+        {/*   <Footer />
           </>
         ) : (
           <p>Cargando datos del usuario...</p>
-        )}
+        )} */}
       </main>
     </div>
   );

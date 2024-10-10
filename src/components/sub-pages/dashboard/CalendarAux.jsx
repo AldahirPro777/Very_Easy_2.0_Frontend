@@ -22,18 +22,30 @@ function CalendarAux() {
               1 <br />
               🌟🎂
             </li>
-            <li>2 <br />📚📚📚📝</li>
-            <li>3 <br />📝</li>
+            <li>2 </li>
+            <li>3 </li>
             <li>4</li>
             <li>5</li>
             <li>6</li>
             <li>7</li>
             <li>8</li>
             <li>9</li>
-            <li>10 <br />🎂</li>
-            <li>11 <br />🎂</li>
-            <li>12 <br />🎂</li>
-            <li>13 <br />🎂</li>
+            <li>
+              10 <br />
+              🎂
+            </li>
+            <li>
+              11 <br />
+              🎂🌟
+            </li>
+            <li>
+              12 <br />
+              🎂
+            </li>
+            <li>
+              13 <br />
+              🎂
+            </li>
             <li>14</li>
             <li>15</li>
             <li>16</li>
