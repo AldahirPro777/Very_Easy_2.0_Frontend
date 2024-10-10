@@ -14,7 +14,7 @@ function Cards() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const api_url =/* process.env.VITE_APP_API_URL ||*/ "http://localhost:7516";
+        const api_url = process.env.VITE_APP_API_URL;
 
         const res = await axios.get(`${api_url}/api/dashboard/allCards`);
 
