@@ -19,8 +19,11 @@ function StudyResources() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const api_url =
+          /* process.env.VITE_APP_API_URL || */ "http://localhost:7516";
+
         const res = await axios.get(
-          "http://localhost:7777/api/studyResources/getResources"
+          `${api_url}/api/studyResources/getResources`
         );
 
         setData(res.data.studyResources);

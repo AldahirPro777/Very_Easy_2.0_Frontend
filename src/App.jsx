@@ -17,11 +17,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route
+        <Route
           path="/*"
           element={<ProtectedRoute element={<SubPagesRoutes />} />}
-        /> */}
-        <Route path="/*" element={<SubPagesRoutes />} />
+        />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

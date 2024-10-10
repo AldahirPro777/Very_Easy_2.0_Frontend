@@ -28,19 +28,18 @@ function Dashboard() {
 
       if (!token) {
         setError("No se encontró el token. Por favor, inicia sesión");
-        /* navigate("/login");
-        return; */
+        navigate("/login");
+        return;
       }
 
       try {
-        const response = await axios.get(
-          "http://localhost:7777/api/users/getDataUser",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const api_url = import.meta.env.VITE_APP_API_URL;
+
+        const response = await axios.get(`${api_url}/api/users/getDataUser`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         setUser(response.data);
         setError(null);
@@ -58,23 +57,21 @@ function Dashboard() {
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
-        {/* 
         {error ? (
           <p className="error">{error}</p>
         ) : user ? (
-          <>*/}
-        <Navbar />
-        <Welcome name={name} genero={genero} />
-        <CardsPendientes />
-        <InfoEscolar />
-        <CalendarAux />
-        <Cumpleañero />
-        <Footer />
-        {/*
+          <>
+            <Navbar />
+            <Welcome name={name} genero={genero} />
+            <CardsPendientes />
+            <InfoEscolar />
+            <CalendarAux />
+            <Cumpleañero />
+            <Footer />
           </>
         ) : (
           <p>Cargando datos del usuario...</p>
-        )}*/}
+        )}
       </main>
     </div>
   );

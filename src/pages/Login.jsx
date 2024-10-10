@@ -4,11 +4,11 @@ import "../scss/login/login.css";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [userName, setUserName] = useState("Aldahir");
-  const [password, setPassword] = useState("1234567");
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
-
+ 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -17,7 +17,7 @@ function Login() {
     setError(null);
     setResponse(null);
 
-    const api_url =  import.meta.env.VITE_APP_API_URL ||  "http://localhost:7777";
+    const api_url = import.meta.env.VITE_APP_API_URL;
 
     try {
       const res = await axios.post(`${api_url}/api/users/login`, {

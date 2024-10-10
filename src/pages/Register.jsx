@@ -20,8 +20,7 @@ function Register() {
     setError(null);
     setResponse(null);
 
-    const api_url =
-       process.env.VITE_APP_API_URL ||  "http://localhost:7777";
+    const api_url = import.meta.env.VITE_APP_API_URL;
 
     try {
       const res = await axios.post(`${api_url}/api/users/register`, {

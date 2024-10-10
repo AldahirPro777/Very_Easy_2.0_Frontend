@@ -14,11 +14,13 @@ function Cards() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          "http://localhost:7777/api/dashboard/allcards"
-        );
+        const api_url =/* process.env.VITE_APP_API_URL ||*/ "http://localhost:7516";
+
+        const res = await axios.get(`${api_url}/api/dashboard/allCards`);
 
         const { tasks, exams, projects } = res.data;
+
+        console.error(res.data);
 
         setTasks(tasks);
         setExams(exams);
