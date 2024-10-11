@@ -24,11 +24,13 @@ function Project({ projects }) {
                 <span>Descripción:</span> {project.descripcion}
               </p>
             )}
+
             {project.materia && (
               <p>
                 <span>Materia:</span> {project.materia}
               </p>
             )}
+
             {project.date && (
               <p>
                 <span>Fecha de entrega: </span>
@@ -42,20 +44,11 @@ function Project({ projects }) {
                     <span>Maestro:</span> {project.teacher}
                   </p>
                 )}
+
                 {project.resourceUrls.length > 0 && (
                   <p>
                     <span>Link de recursos:</span>{" "}
                     {project.resourceUrls.join(", ")}
-                  </p>
-                )}
-                {project.importanceLevel && (
-                  <p>
-                    <span>Nivel de importancia:</span> {project.importanceLevel}
-                  </p>
-                )}
-                {project.tags.length > 0 && (
-                  <p>
-                    <span>Etiquetas:</span> {project.tags.join(", ")}
                   </p>
                 )}
               </div>

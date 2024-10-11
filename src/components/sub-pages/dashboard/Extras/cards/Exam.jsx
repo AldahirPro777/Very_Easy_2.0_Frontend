@@ -24,16 +24,19 @@ function Exam({ exams }) {
                 <span>Materia:</span> {exam.materia}
               </p>
             )}
+
             {exam.date && (
               <p>
                 <span>Fecha de aplicación:</span> {exam.date}
               </p>
             )}
+
             {exam.resourceUrls.length > 0 && (
               <p>
                 <span>Link de recursos:</span> {exam.resourceUrls.join(", ")}
               </p>
             )}
+
             {exam.studyGuideUrls.length > 0 && (
               <p>
                 <span>Guía de estudio:</span> {exam.studyGuideUrls.join(", ")}
@@ -45,16 +48,6 @@ function Exam({ exams }) {
                 {exam.teacher && (
                   <p>
                     <span>Maestro:</span> {exam.teacher}
-                  </p>
-                )}
-                {exam.importanceLevel && (
-                  <p>
-                    <span>Nivel de importancia:</span> {exam.importanceLevel}
-                  </p>
-                )}
-                {exam.tags.length > 0 && (
-                  <p>
-                    <span>Etiquetas:</span> {exam.tags.join(", ")}
                   </p>
                 )}
               </div>

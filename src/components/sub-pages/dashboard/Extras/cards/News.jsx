@@ -10,9 +10,13 @@ function News({ news }) {
           </div>
           <div className="card-body">
             {newss.autor && <p>Autor: {newss.autor}</p>}
+
             {newss.description && <p>Descripción: {newss.description}</p>}
+
             {newss.date && <p>Fecha: {newss.date}</p>}
+
             {newss.fuente && <p>Fuente: {newss.fuente}</p>}
+
             {newss.archivosAdjuntos.length > 0 && (
               <p>Etiquetas: {newss.archivosAdjuntos.join(", ")}</p>
             )}

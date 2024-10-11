@@ -24,11 +24,13 @@ function Task({ tasks }) {
                 <span>Descripción:</span> {task.descripcion}
               </p>
             )}
+
             {task.materia && (
               <p>
                 <span>Materia:</span> {task.materia}
               </p>
             )}
+
             {task.date && (
               <p>
                 <span>Fecha de entrega:</span> {task.date}
@@ -46,16 +48,6 @@ function Task({ tasks }) {
                   <p>
                     <span>Link de recursos:</span> <br />
                     {task.resourceUrls.join(", ")}
-                  </p>
-                )}
-                {task.importanceLevel && (
-                  <p>
-                    <span>Nivel de importancia:</span> {task.importanceLevel}
-                  </p>
-                )}
-                {task.tags.length > 0 && (
-                  <p>
-                    <span>Etiquetas:</span> {task.tags.join(", ")}
                   </p>
                 )}
               </div>
