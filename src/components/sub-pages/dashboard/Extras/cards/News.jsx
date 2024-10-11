@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import formatDate from "../../utils/formatDate.js";
 
 function News({ news }) {
   return (
@@ -12,7 +11,7 @@ function News({ news }) {
           <div className="card-body">
             <p>Autor: {newss.autor}</p>
             <p>Descripcción: {newss.description}</p>
-            <p>Fecha: {formatDate(newss.date)}</p>
+            <p>Fecha: {newss.date}</p>
             <p>Fuente: {newss.fuente}</p>
             <p>Etiquetas: {newss.archivosAdjuntos.join(", ")}</p>
           </div>

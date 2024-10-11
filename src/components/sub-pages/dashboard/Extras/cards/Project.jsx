@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import formatDate from "../../../../../utils/formatDate.js";
 
 function Project({ projects }) {
   const [visible, setVisible] = useState(false);
@@ -28,7 +27,7 @@ function Project({ projects }) {
             </p>
             <p>
               <span>Fecha de entrega: </span>
-              {formatDate(project.date)}
+              {project.date}
             </p>
             {visible[i] && (
               <div className="datos-extra">

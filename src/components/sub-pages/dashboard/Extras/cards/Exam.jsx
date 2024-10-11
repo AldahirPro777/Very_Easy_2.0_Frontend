@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import formatDate from "../../../../../utils/formatDate.js";
 
 function Exam({ exams }) {
   const [visible, setVisible] = useState(false);
@@ -24,7 +23,7 @@ function Exam({ exams }) {
               <span>Materia:</span> {exam.materia}
             </p>
             <p>
-              <span>Fecha de aplicación:</span> {formatDate(exam.date)}
+              <span>Fecha de aplicación:</span> {exam.date}
             </p>
             <p>
               <span>Link de recursos: </span>

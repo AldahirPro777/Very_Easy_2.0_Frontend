@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import formatDate from "../../../../../utils/formatDate.js";
 
 function Task({ tasks }) {
   const [visible, setVisible] = useState({});
@@ -27,8 +26,7 @@ function Task({ tasks }) {
               <span>Materia:</span> {task.materia || "Sin datos"}
             </p>
             <p>
-              <span>Fecha de entrega:</span>{" "}
-              {formatDate(task.date) || "Sin datos"}
+              <span>Fecha de entrega:</span> {task.date || "Sin datos"}
             </p>
 
             {visible[i] && (
