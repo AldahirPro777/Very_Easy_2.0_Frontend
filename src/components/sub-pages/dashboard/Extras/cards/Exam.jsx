@@ -19,31 +19,44 @@ function Exam({ exams }) {
             <h2>{exam.title}</h2>
           </div>
           <div className="card-body">
-            <p>
-              <span>Materia:</span> {exam.materia}
-            </p>
-            <p>
-              <span>Fecha de aplicación:</span> {exam.date}
-            </p>
-            <p>
-              <span>Link de recursos: </span>
-              {exam.resourceUrls.join(", ")}
-            </p>
-            <p>
-              <span>Guia de estudio:</span> {exam.studyGuideUrls.join(", ")}
-            </p>
+            {exam.materia && (
+              <p>
+                <span>Materia:</span> {exam.materia}
+              </p>
+            )}
+            {exam.date && (
+              <p>
+                <span>Fecha de aplicación:</span> {exam.date}
+              </p>
+            )}
+            {exam.resourceUrls.length > 0 && (
+              <p>
+                <span>Link de recursos:</span> {exam.resourceUrls.join(", ")}
+              </p>
+            )}
+            {exam.studyGuideUrls.length > 0 && (
+              <p>
+                <span>Guía de estudio:</span> {exam.studyGuideUrls.join(", ")}
+              </p>
+            )}
 
             {visible[i] && (
               <div className="datos-extra">
-                <p>
-                  <span>Maestro:</span> {exam.teacher}
-                </p>
-                <p>
-                  <span>Nivel de importancia:</span> {exam.importanceLevel}
-                </p>
-                <p>
-                  <span>Etiquetas:</span> {exam.tags.join(", ")}
-                </p>
+                {exam.teacher && (
+                  <p>
+                    <span>Maestro:</span> {exam.teacher}
+                  </p>
+                )}
+                {exam.importanceLevel && (
+                  <p>
+                    <span>Nivel de importancia:</span> {exam.importanceLevel}
+                  </p>
+                )}
+                {exam.tags.length > 0 && (
+                  <p>
+                    <span>Etiquetas:</span> {exam.tags.join(", ")}
+                  </p>
+                )}
               </div>
             )}
 

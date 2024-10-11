@@ -19,31 +19,45 @@ function Project({ projects }) {
             <h2>{project.title}</h2>
           </div>
           <div className="card-body">
-            <p className="descripcion">
-              <span>Descripción:</span> {project.descripcion}
-            </p>
-            <p>
-              <span>Materia:</span> {project.materia}
-            </p>
-            <p>
-              <span>Fecha de entrega: </span>
-              {project.date}
-            </p>
+            {project.descripcion && (
+              <p className="descripcion">
+                <span>Descripción:</span> {project.descripcion}
+              </p>
+            )}
+            {project.materia && (
+              <p>
+                <span>Materia:</span> {project.materia}
+              </p>
+            )}
+            {project.date && (
+              <p>
+                <span>Fecha de entrega: </span>
+                {project.date}
+              </p>
+            )}
             {visible[i] && (
               <div className="datos-extra">
-                <p>
-                  <span>Maestro:</span> {project.teacher}
-                </p>
-                <p>
-                  <span>Link de recursos:</span>{" "}
-                  {project.resourceUrls.join(", ")}
-                </p>
-                <p>
-                  <span>Nivel de importancia:</span> {project.importanceLevel}
-                </p>
-                <p>
-                  <span>Etiquetas:</span> {project.tags.join(", ")}
-                </p>
+                {project.teacher && (
+                  <p>
+                    <span>Maestro:</span> {project.teacher}
+                  </p>
+                )}
+                {project.resourceUrls.length > 0 && (
+                  <p>
+                    <span>Link de recursos:</span>{" "}
+                    {project.resourceUrls.join(", ")}
+                  </p>
+                )}
+                {project.importanceLevel && (
+                  <p>
+                    <span>Nivel de importancia:</span> {project.importanceLevel}
+                  </p>
+                )}
+                {project.tags.length > 0 && (
+                  <p>
+                    <span>Etiquetas:</span> {project.tags.join(", ")}
+                  </p>
+                )}
               </div>
             )}
 

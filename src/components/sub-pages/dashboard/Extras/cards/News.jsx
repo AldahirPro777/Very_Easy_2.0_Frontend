@@ -9,11 +9,13 @@ function News({ news }) {
             <h2>{newss.title}</h2>
           </div>
           <div className="card-body">
-            <p>Autor: {newss.autor}</p>
-            <p>Descripcción: {newss.description}</p>
-            <p>Fecha: {newss.date}</p>
-            <p>Fuente: {newss.fuente}</p>
-            <p>Etiquetas: {newss.archivosAdjuntos.join(", ")}</p>
+            {newss.autor && <p>Autor: {newss.autor}</p>}
+            {newss.description && <p>Descripción: {newss.description}</p>}
+            {newss.date && <p>Fecha: {newss.date}</p>}
+            {newss.fuente && <p>Fuente: {newss.fuente}</p>}
+            {newss.archivosAdjuntos.length > 0 && (
+              <p>Etiquetas: {newss.archivosAdjuntos.join(", ")}</p>
+            )}
           </div>
         </div>
       ))}

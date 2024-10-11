@@ -19,37 +19,45 @@ function Task({ tasks }) {
             <h2>{task.title || "Sin datos"}</h2>
           </div>
           <div className="card-body">
-            <p className="descripcion">
-              <span>Descripción:</span> {task.descripcion || "Sin datos"}
-            </p>
-            <p>
-              <span>Materia:</span> {task.materia || "Sin datos"}
-            </p>
-            <p>
-              <span>Fecha de entrega:</span> {task.date || "Sin datos"}
-            </p>
+            {task.descripcion && (
+              <p className="descripcion">
+                <span>Descripción:</span> {task.descripcion}
+              </p>
+            )}
+            {task.materia && (
+              <p>
+                <span>Materia:</span> {task.materia}
+              </p>
+            )}
+            {task.date && (
+              <p>
+                <span>Fecha de entrega:</span> {task.date}
+              </p>
+            )}
 
             {visible[i] && (
               <div className="datos-extra">
-                <p>
-                  <span>Maestro:</span> {task.teacher || "Sin datos"}
-                </p>
-                <p>
-                  <span>Link de recursos:</span> <br />
-                  {task.resourceUrls.length > 0
-                    ? task.resourceUrls.join(", ")
-                    : "Sin urls"}
-                </p>
-                <p>
-                  <span>Nivel de importancia:</span>{" "}
-                  {task.importanceLevel || "Sin datos"}
-                </p>
-                <p>
-                  <span>Etiquetas:</span>{" "}
-                  {task.tags.length > 0
-                    ? task.tags.join(", ")
-                    : "Sin etiquetas"}
-                </p>
+                {task.teacher && (
+                  <p>
+                    <span>Maestro:</span> {task.teacher}
+                  </p>
+                )}
+                {task.resourceUrls.length > 0 && (
+                  <p>
+                    <span>Link de recursos:</span> <br />
+                    {task.resourceUrls.join(", ")}
+                  </p>
+                )}
+                {task.importanceLevel && (
+                  <p>
+                    <span>Nivel de importancia:</span> {task.importanceLevel}
+                  </p>
+                )}
+                {task.tags.length > 0 && (
+                  <p>
+                    <span>Etiquetas:</span> {task.tags.join(", ")}
+                  </p>
+                )}
               </div>
             )}
 
