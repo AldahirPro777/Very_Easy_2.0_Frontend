@@ -30,13 +30,6 @@ function Register() {
         genero,
       });
 
-      // Limpiar campos después del registro exitoso
-      setName("");
-      setUserName("");
-      setPassword("");
-      setPassword2("");
-      setGenero(null);
-
       setResponse(res.data);
       setError(null);
       navigate("/login");
