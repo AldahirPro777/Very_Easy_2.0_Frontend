@@ -10,5 +10,5 @@ export default defineConfig({
   build: {
     outDir: "dist", // Asegúrate de que Render publique desde el directorio dist
   },
-  base: "./", // Asegúrate de que todas las rutas usen la raíz correctamente
+  base: "/", // Asegúrate de que todas las rutas usen la raíz correctamente
 });
