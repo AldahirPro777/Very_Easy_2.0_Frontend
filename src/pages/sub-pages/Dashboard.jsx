@@ -48,13 +48,13 @@ function Dashboard() {
     fetchUserData();
   }, [navigate]);
 
-  const { name, genero } = user ? user.user : { name: "", genero: "" };
+  const { userName, genero } = user ? user.user : { name: "", genero: "" };
 
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
         <Navbar />
-        <Welcome name={name} genero={genero} />
+        <Welcome userName={userName} genero={genero} />
         <CardsPendientes />
         <InfoEscolar />
         <CalendarAux />
