@@ -30,17 +30,17 @@ function CalendarAux() {
             <li>7</li>
             <li>8</li>
             <li>9</li>
-            <li>
+            <li className="today">
               10 <br />
               🎂🌟
             </li>
-            <li className="today">
+            <li>
               11 <br />
               🎂📚📝
             </li>
             <li>
               12 <br />
-              🎂🎂
+              🎂
             </li>
             <li>
               13 <br />
@@ -65,9 +65,9 @@ function CalendarAux() {
             <li>30</li>
             <li>31</li>
             <li>
-              ✨🌠
+              ✨🎂✨
               <br /> 1 <br />
-              ⭐🌠
+              ⭐🎂⭐
             </li>
           </ol>
         </div>
