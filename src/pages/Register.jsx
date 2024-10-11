@@ -20,12 +20,6 @@ function Register() {
     setError(null);
     setResponse(null);
 
-    // Validación básica para verificar que las contraseñas coinciden
-    if (password !== password2) {
-      setError("Las contraseñas no coinciden");
-      return;
-    }
-
     const api_url = import.meta.env.VITE_APP_API_URL;
 
     try {
