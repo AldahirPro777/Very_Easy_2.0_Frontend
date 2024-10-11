@@ -11,12 +11,12 @@ function Home() {
 
           <div className="blur">
             <p>
-              ¡Hola! 🎉 Bienvenidos a <strong>Very Easy</strong>, un espacio
-              diseñado para ayudarte a organizar tus estudios y maximizar tu
-              rendimiento académico. Con herramientas como un calendario, lista
-              de trabajos pendientes y un blog lleno de recursos útiles. Únete y
-              aprovecha al máximo esta página que te salvará de los Rs. <br />
-              ¡La excelencia empieza aquí! 🚀
+              ¡Hola! 🎉 Bienvenidos a <strong>Very Easy</strong>, una pagina web
+              diseñada para ayudarte a organizar tus estudios. Con herramientas
+              como un calendario, lista de trabajos pendientes y un blog lleno
+              de recursos útiles. Aprovecha al máximo esta página que te salvará
+              de los Rs. <br />
+              🚀¡La excelencia empieza aquí! 🚀
             </p>
           </div>
         </section>
