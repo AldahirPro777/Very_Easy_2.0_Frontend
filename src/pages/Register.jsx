@@ -27,6 +27,7 @@ function Register() {
         name,
         userName,
         password,
+        password2,
         genero,
       });
 
