@@ -8,6 +8,7 @@ import CardsPendientes from "../../components/sub-pages/dashboard/CardsPendiente
 import InfoEscolar from "../../components/sub-pages/dashboard/InfoEscolar.jsx";
 import CalendarAux from "../../components/sub-pages/dashboard/CalendarAux.jsx";
 import Cumpleañero from "../../components/sub-pages/dashboard/Cumpleaños.jsx";
+import Loading from "../../components/others/Loading.jsx";
 
 //* Layouts
 import Navbar from "../../components/layouts/Navbar.jsx";
@@ -18,6 +19,7 @@ import "../../scss/sub-pages/dashboard/dashboard.css";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);
 
   const navigate = useNavigate();
 
@@ -39,8 +41,10 @@ function Dashboard() {
           },
         });
 
+        setError("");
         setUser(response.data);
       } catch (err) {
+        setError(err);
         console.error(err);
       }
     };
@@ -53,13 +57,21 @@ function Dashboard() {
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
-        <Navbar />
-        <Welcome userName={userName} genero={genero} />
-        <CardsPendientes />
-        <InfoEscolar />
-        <CalendarAux />
-        <Cumpleañero />
-        <Footer />
+        {error ? (
+          <p className="error">{error}</p>
+        ) : user ? (
+          <>
+            <Navbar />
+            <Welcome userName={userName} genero={genero} />
+            <CardsPendientes />
+            <InfoEscolar />
+            <CalendarAux />
+            <Cumpleañero />
+            <Footer />
+          </>
+        ) : (
+          <Loading />
+        )}
       </main>
     </div>
   );
