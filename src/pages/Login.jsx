@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "../scss/login/login.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const [userName, setUserName] = useState("");
@@ -55,7 +55,6 @@ function Login() {
               className="inp1"
               required
             />
-
             <input
               type="password"
               value={password}
@@ -67,12 +66,11 @@ function Login() {
 
           <button type="submit">Login</button>
 
-          <a className="btn-register" href="/register">
+          <Link className="btn-register" to="/register">
             Regístrate
-          </a>
+          </Link>
 
           {response && <p className="success">{response.message}</p>}
-
           {error && <p className="error">{error}</p>}
         </form>
       </div>
