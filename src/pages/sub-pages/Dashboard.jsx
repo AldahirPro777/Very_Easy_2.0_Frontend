@@ -48,7 +48,7 @@ function Dashboard() {
     fetchUserData();
   }, [navigate]);
 
-  const { userName, genero } = user ? user.user : { name: "", genero: "" };
+  const { userName, genero } = user ? user.user : { userName: "", genero: "" };
 
   return (
     <div className="dashboard-div-body">
