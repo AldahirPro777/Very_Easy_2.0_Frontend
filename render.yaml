@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: render
+    env: static
+    staticSite:
+      buildCommand: npm run build
+      publishDirectory: dist
+      redirectRules:
+        - source: /*
+          destination: /index.html
