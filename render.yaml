@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: Very_Easy_2.0_Frontend
+    env: static
+    staticSite:
+      buildCommand: npm run build
+      publishDirectory: dist
+      redirectRules:
+        - source: /.*  # Redirige todas las rutas
+          destination: /index.html  # Siempre vuelve al index.html
+          statusCode: 200  # Devuelve código 200 para redirección válida
