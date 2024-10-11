@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "../scss/register/register.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Register() {
   const [name, setName] = useState("");
@@ -95,9 +95,9 @@ function Register() {
           Registrarse
         </button>
 
-        <a className="btn-login" href="/login">
+        <Link className="btn-login" to="/login">
           Iniciar sesión
-        </a>
+        </Link>
 
         {response && <p className="success">{response.message}</p>}
 
