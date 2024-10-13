@@ -5,13 +5,15 @@ function Home() {
   return (
     <div className="home-div-body">
       <main>
+        {/* Acceso directo al dashboard */}
+
+        {/* <Link to="/sub-pages/dashboard" className="btn-login">
+          dashboard
+        </Link> */}
+
         {/* Bienvenida a todos */}
         <section className="welcome">
           <h1>Bienvenid@</h1>
-
-          <Link to="/sub-pages/dashboard" className="btn-login">
-            dashboard
-          </Link>
 
           <div className="blur">
             <p>

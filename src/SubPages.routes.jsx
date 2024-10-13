@@ -19,7 +19,6 @@ import "./scss/sub-pages/main.css";
 
 function AppRoutes() {
   const [user, setUser] = useState("");
-  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -27,10 +26,10 @@ function AppRoutes() {
     const fetchUserData = async () => {
       const token = localStorage.getItem("token");
 
-      /* if (!token) {
+      if (!token) {
         navigate("/login");
         return;
-      } */
+      }
 
       try {
         const api_url = import.meta.env.VITE_APP_API_URL;
@@ -41,10 +40,8 @@ function AppRoutes() {
           },
         });
 
-        setError("");
         setUser(response.data);
       } catch (err) {
-        setError(err);
         console.error(err);
       }
     };
