@@ -1,8 +1,4 @@
-/* eslint-disable no-unused-vars */
 import { Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 //* Sub-pages
 import NotFound from "./pages/NotFound.jsx";
@@ -18,79 +14,9 @@ import Profile from "./pages/sub-pages/Profile.jsx";
 import "./scss/sub-pages/main.css";
 
 function AppRoutes() {
-  const [user, setUser] = useState("");
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      const token = localStorage.getItem("token");
-
-      if (!token) {
-        navigate("/login");
-        return;
-      }
-
-      try {
-        const api_url = import.meta.env.VITE_APP_API_URL;
-
-        const response = await axios.get(`${api_url}/api/users/getDataUser`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
-        setUser(response.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    fetchUserData();
-  }, [navigate]);
-
-  const {
-    name,
-    userName,
-    password,
-    genero,
-    isAdmin,
-    birthDate,
-    studentId,
-    favoriteColor,
-    createdAt,
-    updatedAt,
-    status,
-    tags,
-    logros,
-    theme,
-  } = user
-    ? user
-    : {
-        name: "",
-        userName: "",
-        password: "",
-        genero: false,
-        isAdmin: false,
-        birthDate: null,
-        studentId: "",
-        favoriteColor: "",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        status: "",
-        tags: [],
-        logros: [],
-        theme: true,
-      };
-
   return (
     <Routes>
-      <Route
-        path="/sub-pages/dashboard"
-        userName={userName}
-        genero={genero}
-        element={<Dashboard />}
-      />
+      <Route path="/sub-pages/dashboard" element={<Dashboard />} />
       <Route path="/sub-pages/calendario" element={<Calendar />} />
       <Route path="/sub-pages/studyResources" element={<StudyResources />} />
       <Route path="/sub-pages/classroom" element={<Classroom />} />

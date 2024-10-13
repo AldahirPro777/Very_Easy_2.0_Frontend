@@ -28,11 +28,6 @@ function Login() {
       // Guardar el token en localStorage
       localStorage.setItem("token", res.data.token);
 
-      // Limpiar los campos de entrada
-      setUserName("");
-      setPassword("");
-
-      // Almacenar la respuesta y navegar al dashboard
       setResponse(res.data);
       navigate("/sub-pages/dashboard");
     } catch (err) {
