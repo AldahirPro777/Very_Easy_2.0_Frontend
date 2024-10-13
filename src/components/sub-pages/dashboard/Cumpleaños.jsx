@@ -51,8 +51,11 @@ function Cumpleaños() {
   return (
     <section id="cumpleaños">
       <h1>Siguiente Cumpleañero</h1>
-      <h2 className="cumple hombre">Jared</h2>
-      <h3>11 de Octubre</h3>
+      <h2 className="cumple mujer">Genesis</h2>
+      <h2 className="cumple hombre">Saul</h2>
+
+      <h3>12 y 13 de Octubre</h3>
+
       <button
         ref={confettiBtn}
         className="canvas-confetti-btn animate__animated"

@@ -9,6 +9,10 @@ function Home() {
         <section className="welcome">
           <h1>Bienvenid@</h1>
 
+          <Link to="/sub-pages/dashboard" className="btn-login">
+            dashboard
+          </Link>
+
           <div className="blur">
             <p>
               ¡Hola! 🎉 Bienvenidos a <strong>Very Easy</strong>, una pagina web

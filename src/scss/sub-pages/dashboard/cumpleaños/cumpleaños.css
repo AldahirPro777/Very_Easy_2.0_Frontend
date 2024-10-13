@@ -5,35 +5,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* .cumple {
-    font-size: 15vw;
-    font-weight: bold;
-    text-align: center;
-    background: linear-gradient(90deg, #ff7eb3, #ffb8d4);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glowing 1.5s infinite alternate;
-    text-shadow: 0 0 10px rgba(255, 127, 193, 0.7),
-      0 0 20px rgba(255, 127, 193, 0.5);
-  }
-
-  @keyframes glowing {
-    0% {
-      text-shadow: 0 0 10px rgba(255, 127, 193, 0.7),
-        0 0 20px rgba(255, 127, 193, 0.5);
-    }
-
-    100% {
-      text-shadow: 0 0 40px rgba(255, 127, 193, 1),
-        0 0 30px rgba(255, 127, 193, 0.8);
-    }
-  } */
 }
 #cumpleaños h1 {
   font-size: 8vw;
 }
-#cumpleaños .cumple {
+#cumpleaños .hombre {
   font-size: 15vw;
   font-weight: bold;
   text-align: center;
@@ -52,13 +28,32 @@
     text-shadow: 0 0 40px rgb(127, 193, 255), 0 0 30px rgba(127, 193, 255, 0.8);
   }
 }
+#cumpleaños .mujer {
+  font-size: 15vw;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ff7eb3, #ffb8d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowingRose 1.5s infinite alternate;
+  text-shadow: 0 0 10px rgba(255, 127, 193, 0.7), 0 0 20px rgba(255, 127, 193, 0.5);
+}
+@keyframes glowingRose {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 127, 193, 0.7), 0 0 20px rgba(255, 127, 193, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 40px rgb(255, 127, 193), 0 0 30px rgba(255, 127, 193, 0.8);
+  }
+}
 #cumpleaños .canvas-confetti-btn {
   font-size: 5rem;
   border: none;
   background-color: transparent;
   cursor: pointer;
   position: absolute;
-  margin-top: 500px;
+  margin-top: 550px;
 }
 @media (min-width: 700px) {
   #cumpleaños .canvas-confetti-btn {

@@ -10,7 +10,7 @@
     font-size: 8vw;
   }
 
-  .cumple {
+  .hombre {
     font-size: 15vw;
     font-weight: bold;
     text-align: center;
@@ -35,7 +35,7 @@
     }
   }
 
-  /* .cumple {
+   .mujer {
     font-size: 15vw;
     font-weight: bold;
     text-align: center;
@@ -43,12 +43,12 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: glowing 1.5s infinite alternate;
+    animation: glowingRose 1.5s infinite alternate;
     text-shadow: 0 0 10px rgba(255, 127, 193, 0.7),
       0 0 20px rgba(255, 127, 193, 0.5);
   }
 
-  @keyframes glowing {
+  @keyframes glowingRose {
     0% {
       text-shadow: 0 0 10px rgba(255, 127, 193, 0.7),
         0 0 20px rgba(255, 127, 193, 0.5);
@@ -58,7 +58,7 @@
       text-shadow: 0 0 40px rgba(255, 127, 193, 1),
         0 0 30px rgba(255, 127, 193, 0.8);
     }
-  } */
+  } 
 
   .canvas-confetti-btn {
     font-size: 5rem;
@@ -66,7 +66,7 @@
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    margin-top: 500px;
+    margin-top: 550px;
   }
 
   @media (min-width: 700px) {

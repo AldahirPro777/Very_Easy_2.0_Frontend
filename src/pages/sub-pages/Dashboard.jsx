@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+/* eslint-disable no-unused-vars */
 
 //* Components
 import Welcome from "../../components/sub-pages/dashboard/Welcome.jsx";
@@ -17,61 +15,25 @@ import Footer from "../../components/layouts/Footer.jsx";
 //* Css
 import "../../scss/sub-pages/dashboard/dashboard.css";
 
-function Dashboard() {
-  const [user, setUser] = useState(null);
-  const [error, setError] = useState(null);
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      const token = localStorage.getItem("token");
-
-      if (!token) {
-        navigate("/login");
-        return;
-      }
-
-      try {
-        const api_url = import.meta.env.VITE_APP_API_URL;
-
-        const response = await axios.get(`${api_url}/api/users/getDataUser`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
-        setError("");
-        setUser(response.data);
-      } catch (err) {
-        setError(err);
-        console.error(err);
-      }
-    };
-
-    fetchUserData();
-  }, [navigate]);
-
-  const { userName, genero } = user ? user.user : { userName: "", genero: "" };
-
+function Dashboard({ userName, genero }) {
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
-        {error ? (
+        {/* {error ? (
           <p className="error">{error}</p>
         ) : user ? (
-          <>
-            <Navbar />
-            <Welcome userName={userName} genero={genero} />
-            <CardsPendientes />
-            <InfoEscolar />
-            <CalendarAux />
-            <Cumpleañero />
-            <Footer />
-          </>
+          <>  */}
+        <Navbar />
+        <Welcome userName={userName} genero={genero} />
+        <CardsPendientes />
+        <InfoEscolar />
+        <CalendarAux />
+        <Cumpleañero />
+        <Footer />
+        {/*  </>
         ) : (
           <Loading />
-        )}
+        )} */}
       </main>
     </div>
   );
