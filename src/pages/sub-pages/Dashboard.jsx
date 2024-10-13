@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 //* Components
 import Welcome from "../../components/sub-pages/dashboard/Welcome.jsx";
 import CardsPendientes from "../../components/sub-pages/dashboard/CardsPendientes.jsx";
