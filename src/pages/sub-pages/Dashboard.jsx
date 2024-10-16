@@ -57,10 +57,10 @@ function Dashboard() {
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
-         {error ? (
+        {/* {error ? (
           <p className="error">{error}</p>
         ) : user ? (
-          <>  
+          <> */}
         <Navbar />
         <Welcome userName={userName} genero={genero} />
         <CardsPendientes />
@@ -68,10 +68,10 @@ function Dashboard() {
         <CalendarAux />
         <Cumpleañero />
         <Footer />
-          </>
+        {/* </>
         ) : (
           <Loading />
-        )} 
+        )} */}
       </main>
     </div>
   );

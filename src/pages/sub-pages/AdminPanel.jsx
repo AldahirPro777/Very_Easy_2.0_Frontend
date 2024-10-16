@@ -10,12 +10,12 @@ function AdminPanel() {
   const [response, setResponse] = useState(null);
 
   const handleYes = () => {
-    setSelectedButton("yes"); // Marca el botón "Sí" como seleccionado
+    setSelectedButton("yes");
     setResponse("Mentira ");
   };
 
   const handleNo = () => {
-    setSelectedButton("no"); // Marca el botón "No" como seleccionado
+    setSelectedButton("no");
     setResponse("Entonces que haces aqui???");
   };
 

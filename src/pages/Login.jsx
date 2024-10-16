@@ -25,7 +25,6 @@ function Login() {
         password,
       });
 
-      // Guardar el token en localStorage
       localStorage.setItem("token", res.data.token);
 
       setResponse(res.data);

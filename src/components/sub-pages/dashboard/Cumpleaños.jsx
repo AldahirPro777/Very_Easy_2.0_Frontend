@@ -51,10 +51,9 @@ function Cumpleaños() {
   return (
     <section id="cumpleaños">
       <h1>Siguiente Cumpleañero</h1>
-      <h2 className="cumple mujer">Genesis</h2>
-      <h2 className="cumple hombre">Saul</h2>
+      <h2 className="cumple hombre">✨Aldahir⭐</h2>
 
-      <h3>12 y 13 de Octubre</h3>
+      <h1>1 DE NOVIEMBRE</h1>
 
       <button
         ref={confettiBtn}

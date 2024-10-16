@@ -53,11 +53,11 @@ function Exam({ exams }) {
               </div>
             )}
 
-            <div className="button">
+           {/*  <div className="button">
               <button onClick={() => toggleVisibility(i)}>
                 {visible[i] ? "Ocultar datos extras" : "Mostrar datos extras"}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       ))}
