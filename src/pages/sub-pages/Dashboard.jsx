@@ -19,7 +19,6 @@ import "../../scss/sub-pages/dashboard/dashboard.css";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
-  const [error, setError] = useState(null);
 
   const navigate = useNavigate();
 
@@ -41,10 +40,8 @@ function Dashboard() {
           },
         });
 
-        setError("");
         setUser(response.data);
       } catch (err) {
-        setError(err);
         console.error(err);
       }
     };
@@ -57,10 +54,6 @@ function Dashboard() {
   return (
     <div className="dashboard-div-body">
       <main id="dashboard">
-        {/* {error ? (
-          <p className="error">{error}</p>
-        ) : user ? (
-          <> */}
         <Navbar />
         <Welcome userName={userName} genero={genero} />
         <CardsPendientes />
@@ -68,10 +61,6 @@ function Dashboard() {
         <CalendarAux />
         <Cumpleañero />
         <Footer />
-        {/* </>
-        ) : (
-          <Loading />
-        )} */}
       </main>
     </div>
   );

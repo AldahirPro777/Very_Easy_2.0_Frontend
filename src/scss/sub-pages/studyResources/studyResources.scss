@@ -48,13 +48,13 @@
     }
 
     .links a {
-      color: darkcyan;
       letter-spacing: 1px;
+      color: rgb(93, 241, 241);
       transition: all 300ms ease;
 
       &:hover {
         text-decoration: underline;
-        color: rgb(93, 241, 241);
+        color: darkcyan;
       }
     }
     .links {

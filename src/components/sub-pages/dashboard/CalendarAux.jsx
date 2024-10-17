@@ -52,15 +52,22 @@ function CalendarAux() {
             </li>
             <li>15</li>
             <li>16</li>
-            <li>17</li>
-            <li>18</li>
+            <li>
+              17 <br />
+            </li>
+            <li>
+              18 <br /> 📝
+            </li>
             <li>19</li>
             <li>20</li>
             <li>21</li>
             <li>22</li>
             <li>23</li>
             <li>24</li>
-            <li>25</li>
+            <li>
+              25 <br />
+              🛠️📅
+            </li>
             <li>26</li>
             <li>27</li>
             <li>28</li>
