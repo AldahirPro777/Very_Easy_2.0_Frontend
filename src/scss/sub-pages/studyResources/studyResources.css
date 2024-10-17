@@ -43,13 +43,13 @@
   gap: 0.7rem;
 }
 #studyResources .card .links a {
-  color: darkcyan;
   letter-spacing: 1px;
+  color: rgb(93, 241, 241);
   transition: all 300ms ease;
 }
 #studyResources .card .links a:hover {
   text-decoration: underline;
-  color: rgb(93, 241, 241);
+  color: darkcyan;
 }
 #studyResources .card .links {
   display: flex;

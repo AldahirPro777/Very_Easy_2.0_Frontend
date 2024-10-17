@@ -62,7 +62,14 @@ function Login() {
           </div>
 
           <button type="submit" disabled={loading}>
-            {loading ? "Cargando..." : "Login"}
+            {loading ? (
+              <>
+                <div className="spinner"></div>
+                <p>Cargando...</p>
+              </>
+            ) : (
+              "Login"
+            )}
           </button>
 
           <Link className="btn-register" to="/register">
