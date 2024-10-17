@@ -8,6 +8,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -16,6 +17,7 @@ function Login() {
 
     setError(null);
     setResponse(null);
+    setLoading(true);
 
     const api_url = import.meta.env.VITE_APP_API_URL;
 
@@ -32,6 +34,7 @@ function Login() {
     } catch (err) {
       setError(err.response?.data?.message || "Error al iniciar sesión");
       setResponse(null);
+      setLoading(false);
     }
   };
 
@@ -58,7 +61,9 @@ function Login() {
             />
           </div>
 
-          <button type="submit">Login</button>
+          <button type="submit" disabled={loading}>
+            {loading ? "Cargando..." : "Login"}
+          </button>
 
           <Link className="btn-register" to="/register">
             Regístrate

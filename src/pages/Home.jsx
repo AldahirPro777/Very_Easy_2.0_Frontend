@@ -7,9 +7,9 @@ function Home() {
       <main>
         {/* Acceso directo al dashboard */}
 
-       {/*  <Link to="/sub-pages/dashboard" className="btn-login">
+        <Link to="/sub-pages/dashboard" className="btn-login">
           dashboard
-        </Link> */}
+        </Link>
 
         {/* Bienvenida a todos */}
         <section className="welcome">

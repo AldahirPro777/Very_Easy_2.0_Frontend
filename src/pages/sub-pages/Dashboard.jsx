@@ -8,7 +8,6 @@ import CardsPendientes from "../../components/sub-pages/dashboard/CardsPendiente
 import InfoEscolar from "../../components/sub-pages/dashboard/InfoEscolar.jsx";
 import CalendarAux from "../../components/sub-pages/dashboard/CalendarAux.jsx";
 import Cumpleañero from "../../components/sub-pages/dashboard/Cumpleaños.jsx";
-import Loading from "../../components/others/Loading.jsx";
 
 //* Layouts
 import Navbar from "../../components/layouts/Navbar.jsx";

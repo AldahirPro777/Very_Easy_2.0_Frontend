@@ -60,7 +60,10 @@ function CalendarAux() {
             </li>
             <li>19</li>
             <li>20</li>
-            <li>21</li>
+            <li>
+              21 <br />
+              📚
+            </li>
             <li>22</li>
             <li>23</li>
             <li>24</li>
