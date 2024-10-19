@@ -19,7 +19,9 @@ function StudyResources() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const api_url = import.meta.env.VITE_APP_API_URL;
+        const api_url =
+          import.meta.env.VITE_APP_API_URL ||
+          import.meta.env.VITE_APP_API_URL_DEV;
 
         const res = await axios.get(
           `${api_url}/api/studyResources/getResources`

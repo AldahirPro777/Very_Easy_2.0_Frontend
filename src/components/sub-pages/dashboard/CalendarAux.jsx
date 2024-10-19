@@ -77,7 +77,7 @@ function CalendarAux() {
             <li>29</li>
             <li>30</li>
             <li>31</li>
-            <li>
+            <li className="today">
               ✨🎂✨
               <br /> 1 <br />
               ⭐🎂⭐

@@ -19,7 +19,7 @@ function Login() {
     setResponse(null);
     setLoading(true);
 
-    const api_url = import.meta.env.VITE_APP_API_URL;
+    const api_url = import.meta.env.VITE_APP_API_URL || import.meta.env.VITE_APP_API_URL_DEV;
 
     try {
       const res = await axios.post(`${api_url}/api/users/login`, {
