@@ -11,6 +11,7 @@ function Register() {
   const [genero, setGenero] = useState(null);
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -19,6 +20,7 @@ function Register() {
 
     setError(null);
     setResponse(null);
+    setLoading(true);
 
     const api_url =
       import.meta.env.VITE_APP_API_URL || import.meta.env.VITE_APP_API_URL_DEV;
@@ -37,6 +39,7 @@ function Register() {
     } catch (err) {
       setError(err.response?.data?.message || "Error en el Registro");
       setResponse(null);
+      setLoading(false);
     }
   };
 
@@ -93,7 +96,14 @@ function Register() {
         </div>
 
         <button className="btn-register" type="submit">
-          Registrarse
+          {loading ? (
+            <>
+              <div className="spinner"></div>
+              <p>Cargando...</p>
+            </>
+          ) : (
+            "Registrarse"
+          )}
         </button>
 
         <Link className="btn-login" to="/login">

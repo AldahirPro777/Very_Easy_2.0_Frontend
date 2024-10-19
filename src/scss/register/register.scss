@@ -28,11 +28,7 @@
     font-size: 50px;
     letter-spacing: 1px;
     color: transparent;
-    background: linear-gradient(
-      240deg,
-      rgb(123, 91, 199) 10%,
-      rgb(234, 56, 141) 100%
-    );
+    background: linear-gradient(240deg, #bf622e 10%, rgb(234, 56, 141) 100%);
     background-clip: text;
     -webkit-background-clip: text;
   }
@@ -66,14 +62,6 @@
     color: #000;
   }
 
-  .genero {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 25px 0;
-  }
-
   .btn-genero {
     border-radius: 20px;
     border: 0;
@@ -82,42 +70,70 @@
     letter-spacing: 1px;
     font-size: 1rem;
     transition: all 300ms ease;
+
+    &:hover {
+      scale: 1.1;
+      border: 1px solid #000;
+    }
+
+    &:active {
+      transition: all 100ms ease;
+      scale: 0.8;
+    }
   }
 
-  .btn-genero:hover {
-    scale: 1.1;
-    border: 1px solid #000;
-  }
+  .genero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0;
 
-  .btn-genero:active{
-    transition: all 100ms ease;
-    scale: 0.8;
-  }
+    .hombre {
+      background-color: #0388c1;
+    }
 
-  .hombre {
-    background-color: #0388c1;
-  }
-
-  .mujer {
-    background-color: pink;
+    .mujer {
+      background-color: pink;
+    }
   }
 
   .btn-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     border-radius: 20px;
     outline: none;
     padding: 5px 5px;
     transition: all 400ms ease;
-    background-color: #fff;
-    color: #000;
     font-size: 18px;
     border: 2px solid #000;
-  }
 
-  .btn-register:hover {
-    color: #fff;
-    background-color: #e7a147;
-    font-size: 19px;
+    &:hover {
+      color: #fff;
+      background-color: #e7a147;
+      font-size: 19px;
+    }
+
+    &:active {
+    transition: all 100ms ease;
+    scale: 0.9;
+    }
+
+    .spinner {
+      margin-right: 10px;
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-left-color: #e7a147;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 1s linear infinite;
+    }
+
+    &:hover .spinner {
+      border-left-color: #fff;
+    }
   }
 
   .btn-login {

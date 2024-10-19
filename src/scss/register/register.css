@@ -27,7 +27,7 @@
   font-size: 50px;
   letter-spacing: 1px;
   color: transparent;
-  background: linear-gradient(240deg, rgb(123, 91, 199) 10%, rgb(234, 56, 141) 100%);
+  background: linear-gradient(240deg, #bf622e 10%, rgb(234, 56, 141) 100%);
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -59,13 +59,6 @@
 .register-div-body input::placeholder {
   color: #000;
 }
-.register-div-body .genero {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  padding: 25px 0;
-}
 .register-div-body .btn-genero {
   border-radius: 20px;
   border: 0;
@@ -83,20 +76,28 @@
   transition: all 100ms ease;
   scale: 0.8;
 }
-.register-div-body .hombre {
+.register-div-body .genero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 25px 0;
+}
+.register-div-body .genero .hombre {
   background-color: #0388c1;
 }
-.register-div-body .mujer {
+.register-div-body .genero .mujer {
   background-color: pink;
 }
 .register-div-body .btn-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   border-radius: 20px;
   outline: none;
   padding: 5px 5px;
   transition: all 400ms ease;
-  background-color: #fff;
-  color: #000;
   font-size: 18px;
   border: 2px solid #000;
 }
@@ -104,6 +105,22 @@
   color: #fff;
   background-color: #e7a147;
   font-size: 19px;
+}
+.register-div-body .btn-register:active {
+  transition: all 100ms ease;
+  scale: 0.9;
+}
+.register-div-body .btn-register .spinner {
+  margin-right: 10px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #e7a147;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+.register-div-body .btn-register:hover .spinner {
+  border-left-color: #fff;
 }
 .register-div-body .btn-login {
   text-decoration: none;
