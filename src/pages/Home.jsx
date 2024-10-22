@@ -7,10 +7,6 @@ function Home() {
       <main>
         {/* Acceso directo al dashboard */}
 
-        {/* <Link to="/sub-pages/dashboard" className="btn-login">
-          dashboard
-        </Link> */}
-
         {/* Bienvenida a todos */}
         <section className="welcome">
           <h1>Bienvenid@</h1>

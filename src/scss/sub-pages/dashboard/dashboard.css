@@ -1,7 +1,9 @@
-#dashboard {background: linear-gradient(0deg, #ffeffc, #b5d3ff);
+#dashboard {
+  background: linear-gradient(0deg, #ffeffc, #b5d3ff);
   display: flex;
   flex-direction: column;
   gap: 150px;
+  padding-bottom: 100px;
 }
 
 #dashboard section {

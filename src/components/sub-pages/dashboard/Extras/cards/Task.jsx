@@ -44,20 +44,14 @@ function Task({ tasks }) {
                     <span>Maestro:</span> {task.teacher}
                   </p>
                 )}
-                {task.resourceUrls.length > 0 && (
-                  <p>
-                    <span>Link de recursos:</span> <br />
-                    {task.resourceUrls.join(", ")}
-                  </p>
-                )}
               </div>
             )}
 
-            {/* <div className="button">
+            <div className="button">
               <button onClick={() => toggleVisibility(i)}>
                 {visible[i] ? "Ocultar datos extras" : "Mostrar datos extras"}
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       ))}

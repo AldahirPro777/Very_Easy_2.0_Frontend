@@ -64,12 +64,17 @@ function CalendarAux() {
               21 <br />
               📚
             </li>
-            <li>22</li>
+            <li>
+              22 <br />
+              📚📚
+              <br />
+              🌟
+            </li>
             <li>23</li>
             <li>24</li>
             <li>
               25 <br />
-              🛠️📅
+              📅
             </li>
             <li>26</li>
             <li>27</li>
@@ -87,9 +92,9 @@ function CalendarAux() {
 
         <div className="simbologia">
           <h3>Simbologia</h3>
-          {/* <p>
+          <p>
             <span>HOY: </span>🌟
-          </p> */}
+          </p>
           <p>
             <span>Tarea: </span>📚
           </p>

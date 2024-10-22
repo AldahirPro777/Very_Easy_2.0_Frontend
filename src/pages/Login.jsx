@@ -4,6 +4,7 @@ import "../scss/login/login.css";
 import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
+
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState(null);
@@ -19,7 +20,8 @@ function Login() {
     setResponse(null);
     setLoading(true);
 
-    const api_url = import.meta.env.VITE_APP_API_URL || import.meta.env.VITE_APP_API_URL_DEV;
+    const api_url =
+      import.meta.env.VITE_APP_API_URL || import.meta.env.VITE_APP_API_URL_DEV;
 
     try {
       const res = await axios.post(`${api_url}/api/users/login`, {

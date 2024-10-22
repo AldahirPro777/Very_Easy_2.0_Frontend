@@ -1,47 +1,58 @@
-//* Layouts
 import Navbar from "../../components/layouts/Navbar.jsx";
 import Footer from "../../components/layouts/Footer.jsx";
-import { useState } from "react";
 
-import "../../scss/sub-pages/adminPanel/adminPanel.css";
+import axios from "axios";
+
+import PanelTasks from "../../components/sub-pages/adminPanel/PanelTasks.jsx";
+
+import Loading from "../../components/others/Loading.jsx";
+
+import { useState, useEffect } from "react";
 
 function AdminPanel() {
-  const [selectedButton, setSelectedButton] = useState(null);
-  const [response, setResponse] = useState(null);
+  const [tasks, setTasks] = useState("");
 
-  const handleYes = () => {
-    setSelectedButton("yes");
-    setResponse("Mentira ");
+  const fetchTasks = async () => {
+    try {
+      //* API
+      const api_url =
+        import.meta.env.VITE_APP_API_URL ||
+        import.meta.env.VITE_APP_API_URL_DEV;
+
+      const res = await axios.get(`${api_url}/api/admin/getTasks`);
+      setTasks(res.data.BackTasks);
+    } catch (err) {
+      console.error("Error al obtener las tareas", err);
+    }
   };
 
-  const handleNo = () => {
-    setSelectedButton("no");
-    setResponse("Entonces que haces aqui???");
-  };
+  fetchTasks();
+
+  useEffect(() => {}, [tasks]);
+
+  if (!tasks) {
+    return <Loading />;
+  }
 
   return (
-    <div>
+    <>
       <Navbar />
-      <div className="sub-pages-body">
-        <h1>¿Eres admin?</h1>
-        <div className="btns">
-          <button
-            onClick={handleYes}
-            className={selectedButton === "yes" ? "selected" : ""}
-          >
-            Sí
-          </button>
-          <button
-            onClick={handleNo}
-            className={selectedButton === "no" ? "selected" : ""}
-          >
-            No
-          </button>
+      <main id="adminPanel">
+        <div className="welcome">
+          <h1>Panel del admin</h1>
         </div>
-        {response && <p>{response}</p>}
-      </div>
+
+        <h1>Pendientes</h1>
+        <PanelTasks
+          tasks={tasks}
+          setTasks={setTasks}
+          axios={axios}
+          useState={useState}
+          useEffect={useEffect}
+        />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

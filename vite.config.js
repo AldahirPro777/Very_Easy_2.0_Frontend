@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true,
-    port: process.env.PORT || 7777, // Usa la variable de entorno PORT en Render
+    port: process.env.PORT || 7777,
   },
   build: {
-    outDir: "dist", // Asegúrate de que Render publique desde el directorio dist
+    outDir: "dist",
   },
-  base: "/", // Asegúrate de que todas las rutas usen la raíz correctamente
+  base: "/",
 });

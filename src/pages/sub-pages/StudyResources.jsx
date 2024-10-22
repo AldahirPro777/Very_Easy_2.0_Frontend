@@ -40,9 +40,9 @@ function StudyResources() {
   }, []);
 
   return (
-    <div>
-      <Navbar />
+    <>
       <main id="studyResources">
+        <Navbar />
         <h1>Recursos De Estudio</h1>
         {error ? (
           <p>Mensaje de error: {error.message}</p>
@@ -55,7 +55,7 @@ function StudyResources() {
         )}
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
