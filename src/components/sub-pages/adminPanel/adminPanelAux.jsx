@@ -11,7 +11,7 @@ import AdminPanel from "../../../pages/sub-pages/AdminPanel.jsx";
 function AdminPanelAux({ user }) {
   const [selectedButton, setSelectedButton] = useState(null);
   const [response, setResponse] = useState(null);
-  const [showPanel, setShowPanel] = useState(false);
+  const [showPanel, setShowPanel] = useState(true);
 
   const handleYes = () => {
     setSelectedButton("yes");
@@ -19,8 +19,6 @@ function AdminPanelAux({ user }) {
     if (user.isAdmin) {
       setShowPanel(true);
     } else {
-      //! Admin temporal
-      setShowPanel(true);
       setResponse("Mentira ");
     }
   };

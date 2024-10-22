@@ -213,11 +213,9 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
               <label htmlFor="isFixed">Tarea destacada</label>
               <select
                 id="isFixed"
-                value={isFixed || ""}
+                value={isFixed ? "true" : "false"}
                 onChange={(e) => setIsFixed(e.target.value === "true")}
               >
-                <option value="">Seleccione una opción</option>
-                {/* Opción por defecto */}
                 <option value="false">False</option>
                 <option value="true">True</option>
               </select>
