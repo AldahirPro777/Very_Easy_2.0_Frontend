@@ -285,7 +285,7 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
                   <span>Tarea destacada:</span> {task.isFixed ? "Sí" : "No"}
                   <br />
                   <small>
-                    <span>Creado en:</span>{" "}
+                    <span>Creado en:</span>{" "}<br />
                     {new Date(task.createdAt).toLocaleString("es-ES", {
                       day: "numeric",
                       month: "long",
