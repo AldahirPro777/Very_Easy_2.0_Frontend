@@ -11,7 +11,7 @@ function Teachers() {
         </div>
 
         <div className="details">
-          <h3>Hector Covarrubias</h3>
+          <h3>Gilberto Funes</h3>
           <h4>K1, Lab. Int, O2, Biblioteca • Módulo</h4>
 
           <div className="tags">

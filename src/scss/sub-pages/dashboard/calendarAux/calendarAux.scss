@@ -34,12 +34,13 @@
           padding: 5px;
         }
 
-        li:hover, .today {
+        li:hover,
+        .today {
           background-color: #fff;
         }
       }
 
-      .firts-day {
+      .first-day {
         grid-column-start: 3;
       }
 

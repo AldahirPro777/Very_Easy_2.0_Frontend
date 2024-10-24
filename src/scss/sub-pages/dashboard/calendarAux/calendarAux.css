@@ -32,10 +32,11 @@
 #calendarAux .container .tabla ol li {
   padding: 5px;
 }
-#calendarAux .container .tabla ol li:hover, #calendarAux .container .tabla ol .today {
+#calendarAux .container .tabla ol li:hover,
+#calendarAux .container .tabla ol .today {
   background-color: #fff;
 }
-#calendarAux .container .tabla .firts-day {
+#calendarAux .container .tabla .first-day {
   grid-column-start: 3;
 }
 #calendarAux .container .tabla .day-name {

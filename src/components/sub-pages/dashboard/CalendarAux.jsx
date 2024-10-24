@@ -1,7 +1,79 @@
+import { useEffect, useState } from "react";
 import "../../../scss/sub-pages/dashboard/calendarAux/calendarAux.css";
-//! import CalendarioPDF from "../docs/Calendar.jsx";
 
 function CalendarAux() {
+  const [currentDay, setCurrentDay] = useState(new Date().getDate());
+
+  useEffect(() => {
+    // Función para calcular el tiempo hasta la medianoche
+    const timeUntilMidnight = () => {
+      const now = new Date();
+      const midnight = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate() + 1, // El siguiente día
+        0,
+        0,
+        0,
+        0 // A las 12:00 am
+      );
+      return midnight - now; // Diferencia en milisegundos
+    };
+
+    // Actualiza el día y configura el setTimeout para la medianoche
+    const updateAtMidnight = () => {
+      setCurrentDay(new Date().getDate());
+
+      // Espera hasta la medianoche
+      const timeout = setTimeout(() => {
+        setCurrentDay(new Date().getDate());
+        // Después de actualizar, configura un intervalo que se ejecuta cada 24 horas
+        setInterval(() => {
+          setCurrentDay(new Date().getDate());
+        }, 24 * 60 * 60 * 1000); // Cada 24 horas
+      }, timeUntilMidnight());
+
+      return () => clearTimeout(timeout);
+    };
+
+    updateAtMidnight(); // Inicializar la primera actualización
+  }, []);
+
+  // Función para renderizar los días con sus emojis especiales
+  const specialDays = {
+    1: "🎂",
+    10: "🎂",
+    11: "🎂",
+    12: "🎂",
+    13: "🎂",
+    24: "📝🛠️",
+    25: "📅",
+    28: "🛠️",
+  };
+
+  const renderDay = (day) => {
+    // Si es el día actual, añadir 🌟 y cualquier otro emoji especial
+    if (day === currentDay) {
+      return (
+        <li className={day === 1 ? "first-day today" : "today"}>
+          {day} <br />
+          🌟{specialDays[day] ? specialDays[day] : ""}
+        </li>
+      );
+    } else if (specialDays[day]) {
+      // Si es un día especial, mostrar su emoji correspondiente
+      return (
+        <li className={day === 1 ? "first-day" : ""}>
+          {day} <br />
+          {specialDays[day]}
+        </li>
+      );
+    } else {
+      // Día normal sin emoji especial
+      return <li>{day}</li>;
+    }
+  };
+
   return (
     <section id="calendarAux">
       <h1>Calendario</h1>
@@ -18,70 +90,37 @@ function CalendarAux() {
             <li className="day-name">V</li>
             <li className="day-name">S</li>
 
-            <li className="firts-day">
-              1 <br />
-              🎂
-            </li>
-            <li>2 </li>
-            <li>3 </li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>
-              10 <br />
-              🎂
-            </li>
-            <li>
-              11 <br />
-              🎂
-            </li>
-            <li>
-              12 <br />
-              🎂
-            </li>
-            <li>
-              13 <br />
-              🎂
-            </li>
-            <li>
-              14 <br />
-              📚📚
-            </li>
-            <li>15</li>
-            <li>16</li>
-            <li>
-              17 <br />
-            </li>
-            <li>
-              18 <br /> 📝
-            </li>
-            <li>19</li>
-            <li>20</li>
-            <li>
-              21 <br />
-              📚
-            </li>
-            <li>
-              22 <br />
-              📚📚
-              
-            </li>
-            <li>23</li>
-            <li>24 <br />
-              🌟</li>
-            <li>
-              25 <br />
-              📅
-            </li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
+            {renderDay(1)}
+            {renderDay(2)}
+            {renderDay(3)}
+            {renderDay(4)}
+            {renderDay(5)}
+            {renderDay(6)}
+            {renderDay(7)}
+            {renderDay(8)}
+            {renderDay(9)}
+            {renderDay(10)}
+            {renderDay(11)}
+            {renderDay(12)}
+            {renderDay(13)}
+            {renderDay(14)}
+            {renderDay(15)}
+            {renderDay(16)}
+            {renderDay(17)}
+            {renderDay(18)}
+            {renderDay(19)}
+            {renderDay(20)}
+            {renderDay(21)}
+            {renderDay(22)}
+            {renderDay(23)}
+            {renderDay(24)}
+            {renderDay(25)}
+            {renderDay(26)}
+            {renderDay(27)}
+            {renderDay(28)}
+            {renderDay(29)}
+            {renderDay(30)}
+            {renderDay(31)}
             <li className="today">
               ✨🎂✨
               <br /> 1 <br />
@@ -113,9 +152,6 @@ function CalendarAux() {
           <p>
             <span>NO hay clases: </span>🚫
           </p>
-          {/* <a target="_blank" href="../../docs/Calendario.pdf">
-            Mas Información
-          </a> */}
         </div>
       </div>
     </section>
