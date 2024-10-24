@@ -16,12 +16,16 @@ function RenderCards({ data }) {
               <span>Tipo: </span>
               {item.type}
             </p>
+
+            {/*
             <p>
               <span>Etiquetas: </span>
               {item.tags.join(", ")}
             </p>
+             */}
+
             <div className="links">
-              {item.url.map((url, j) => (
+              {item.urls.map((url, j) => (
                 <a key={j} href={url} target="_blank">
                   {url}
                 </a>

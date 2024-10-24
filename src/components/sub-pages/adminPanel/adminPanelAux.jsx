@@ -12,8 +12,7 @@ function AdminPanelAux({ user }) {
   const [selectedButton, setSelectedButton] = useState(null);
   const [response, setResponse] = useState(null);
 
-  //! Cambiar true por false para que solo entren los admins
-  const [showPanel, setShowPanel] = useState(true);
+  const [showPanel, setShowPanel] = useState(false);
 
   const handleYes = () => {
     setSelectedButton("yes");
