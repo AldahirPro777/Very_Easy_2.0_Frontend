@@ -67,11 +67,11 @@ function CalendarAux() {
             <li>
               22 <br />
               📚📚
-              <br />
-              🌟
+              
             </li>
             <li>23</li>
-            <li>24</li>
+            <li>24 <br />
+              🌟</li>
             <li>
               25 <br />
               📅
