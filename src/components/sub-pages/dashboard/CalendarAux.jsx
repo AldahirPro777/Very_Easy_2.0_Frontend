@@ -42,13 +42,12 @@ function CalendarAux() {
   // Función para renderizar los días con sus emojis especiales
   const specialDays = {
     1: "🎂",
-    10: "🎂",
-    11: "🎂",
+    4: "🎂",
+    11: "📝",
     12: "🎂",
-    13: "🎂",
-    24: "📝🛠️",
-    25: "📅",
-    28: "🛠️",
+    20: "🎂",
+    21: "🎂",
+    22: "🎂",
   };
 
   const renderDay = (day) => {
@@ -79,7 +78,7 @@ function CalendarAux() {
       <h1>Calendario</h1>
       <div className="container">
         <div className="tabla">
-          <h3>Octubre</h3>
+          <h3>Noviembre</h3>
 
           <ol>
             <li className="day-name">D</li>
@@ -120,12 +119,6 @@ function CalendarAux() {
             {renderDay(28)}
             {renderDay(29)}
             {renderDay(30)}
-            {renderDay(31)}
-            <li className="today">
-              ✨🎂✨
-              <br /> 1 <br />
-              ⭐🎂⭐
-            </li>
           </ol>
         </div>
 

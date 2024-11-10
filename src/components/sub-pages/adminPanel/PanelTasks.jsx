@@ -266,43 +266,45 @@ function PanelTasks({ tasks, setTasks, axios, useState, useEffect }) {
         <div className="rendertasks">
           <h2>Lista de Tareas</h2>
 
-          {tasks.length === 0 ? (
-            <p>No hay tareas disponibles.</p>
-          ) : (
-            <ul>
-              {tasks.map((task) => (
-                <li key={task._id}>
-                  <strong>{task.title}</strong> - {task.importanceLevel}
-                  <br />
-                  <span>Materia:</span> {task.materia}
-                  <br />
-                  <span>Descripción:</span> {task.descripcion}
-                  <br />
-                  <span>Maestro:</span> {task.teacher}
-                  <br />
-                  <span>Fecha:</span> {task.date}
-                  <br />
-                  <span>Tarea destacada:</span> {task.isFixed ? "Sí" : "No"}
-                  <br />
-                  <small>
-                    <span>Creado en:</span>{" "}<br />
-                    {new Date(task.createdAt).toLocaleString("es-ES", {
-                      day: "numeric",
-                      month: "long",
-                      hour: "numeric",
-                      minute: "numeric",
-                    })}
-                  </small>
-                  <button
-                    onClick={() => handleDelete(task._id)}
-                    className="delete"
-                  >
-                    Borrar
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
+          <div className="tasksContainer">
+            {tasks.length === 0 ? (
+              <p>No hay tareas disponibles.</p>
+            ) : (
+              <ul>
+                {tasks.map((task) => (
+                  <li key={task._id}>
+                    <strong>{task.title}</strong> - {task.importanceLevel}
+                    <br />
+                    <span>Materia:</span> {task.materia}
+                    <br />
+                    <span>Descripción:</span> {task.descripcion}
+                    <br />
+                    <span>Maestro:</span> {task.teacher}
+                    <br />
+                    <span>Fecha:</span> {task.date}
+                    <br />
+                    <span>Tarea destacada:</span> {task.isFixed ? "Sí" : "No"}
+                    <br />
+                    <small>
+                      <span>Creado en:</span> <br />
+                      {new Date(task.createdAt).toLocaleString("es-ES", {
+                        day: "numeric",
+                        month: "long",
+                        hour: "numeric",
+                        minute: "numeric",
+                      })}
+                    </small>
+                    <button
+                      onClick={() => handleDelete(task._id)}
+                      className="delete"
+                    >
+                      Borrar
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </section>
     </>

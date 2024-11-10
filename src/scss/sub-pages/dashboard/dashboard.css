@@ -1,5 +1,5 @@
 #dashboard {
-  background: linear-gradient(0deg, #ffeffc, #b5d3ff);
+  background: linear-gradient(180deg, #b5d3ff, #ffeffc);
   display: flex;
   flex-direction: column;
   gap: 150px;

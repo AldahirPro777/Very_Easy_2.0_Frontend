@@ -25,9 +25,7 @@ function Navbar() {
       </label>
 
       <nav>
-        <a target="" onClick={() => navigate("/sub-pages/dashboard")}>
-          Dashboard
-        </a>
+        <a onClick={() => navigate("/")}>Dashboard</a>
         <a onClick={() => navigate("/sub-pages/calendario")}>Calendario</a>
         <a onClick={() => navigate("/sub-pages/studyResources")}>Recursos</a>
         <a onClick={() => navigate("/sub-pages/classroom")}>Classroom</a>

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 //* Layouts
 import Navbar from "../../layouts/Navbar.jsx";
 import Footer from "../../layouts/Footer.jsx";
@@ -8,25 +7,31 @@ import "../../../scss/sub-pages/adminPanel/adminPanel.css";
 
 import AdminPanel from "../../../pages/sub-pages/AdminPanel.jsx";
 
-function AdminPanelAux({ user }) {
+function AdminPanelAux() {
   const [selectedButton, setSelectedButton] = useState(null);
   const [response, setResponse] = useState(null);
+  const [password, setPassword] = useState("");
 
+  const [showInput, setShowInput] = useState(false);
   const [showPanel, setShowPanel] = useState(false);
 
   const handleYes = () => {
     setSelectedButton("yes");
 
-    if (user.isAdmin) {
-      setShowPanel(true);
-    } else {
-      setResponse("Mentira ");
-    }
+    setShowInput(true);
   };
 
   const handleNo = () => {
     setSelectedButton("no");
     setResponse("Entonces que haces aqui???");
+  };
+
+  const handlePassword = () => {
+    if (password == "A7") {
+      setShowPanel(true);
+    } else {
+      setResponse("Contraseña incorrecta");
+    }
   };
 
   if (showPanel) {
@@ -52,6 +57,18 @@ function AdminPanelAux({ user }) {
             No
           </button>
         </div>
+
+        {showInput && (
+          <>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={handlePassword}>Verificar</button>
+          </>
+        )}
+
         {response && <p>{response}</p>}
       </div>
       <Footer />

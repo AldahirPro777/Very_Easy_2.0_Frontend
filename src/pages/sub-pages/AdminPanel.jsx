@@ -4,7 +4,6 @@ import Footer from "../../components/layouts/Footer.jsx";
 import axios from "axios";
 
 import PanelTasks from "../../components/sub-pages/adminPanel/PanelTasks.jsx";
-
 import Loading from "../../components/others/Loading.jsx";
 
 import { useState, useEffect } from "react";
@@ -31,7 +30,7 @@ function AdminPanel() {
   useEffect(() => {}, [tasks]);
 
   if (!tasks) {
-    return <Loading />;
+    <Loading />;
   }
 
   return (
@@ -42,14 +41,16 @@ function AdminPanel() {
           <h1>Panel del admin</h1>
         </div>
 
-        <h1>Pendientes</h1>
-        <PanelTasks
-          tasks={tasks}
-          setTasks={setTasks}
-          axios={axios}
-          useState={useState}
-          useEffect={useEffect}
-        />
+        <section id="tasks">
+          <h1>Pendientes</h1>
+          <PanelTasks
+            tasks={tasks}
+            setTasks={setTasks}
+            axios={axios}
+            useState={useState}
+            useEffect={useEffect}
+          />
+        </section>
       </main>
       <Footer />
     </>

@@ -1,11 +1,10 @@
-/* eslint-disable react/prop-types */
 import "../../../scss/sub-pages/dashboard/welcome/welcome.css";
 
-function Welcome({ userName, genero }) {
+function Welcome() {
   return (
     <div id="welcome">
       <p>
-        {genero ? "Bienvenido " : "Bienvenida "} {userName || "Invitado"}
+        Bienvenid@
       </p>
     </div>
   );

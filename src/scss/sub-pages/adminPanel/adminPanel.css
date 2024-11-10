@@ -160,22 +160,6 @@
 #adminPanel .main-container .form .btns .clean:hover {
   background-color: #333;
 }
-#adminPanel .main-container .form .rendertasks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#adminPanel .main-container .form .rendertasks ul {
-  list-style: none;
-  padding: 0;
-}
-#adminPanel .main-container .form .rendertasks ul li {
-  background: #e9ecef;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 4px;
-}
 #adminPanel .main-container .messages {
   display: flex;
   justify-content: center;
@@ -228,28 +212,32 @@
   background-color: rgba(100, 149, 237, 0.8);
 }
 #adminPanel .main-container .rendertasks {
-  max-width: 800px;
+  min-width: 300px;
+  max-width: 400px;
   margin: 20px auto;
   padding: 20px;
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-#adminPanel .main-container .rendertasks h2 {
+#adminPanel .main-container .rendertasks .tasksContainer {
+  overflow: hidden;
+}
+#adminPanel .main-container .rendertasks .tasksContainer h2 {
   text-align: center;
   color: #343a40;
   margin-bottom: 20px;
 }
-#adminPanel .main-container .rendertasks p {
+#adminPanel .main-container .rendertasks .tasksContainer p {
   text-align: center;
   color: #6c757d;
 }
-#adminPanel .main-container .rendertasks ul {
+#adminPanel .main-container .rendertasks .tasksContainer ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-#adminPanel .main-container .rendertasks ul li {
+#adminPanel .main-container .rendertasks .tasksContainer ul li {
   background-color: #ffffff;
   border: 1px solid #e9ecef;
   border-radius: 5px;
@@ -257,17 +245,17 @@
   margin-bottom: 10px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-#adminPanel .main-container .rendertasks ul li:hover {
+#adminPanel .main-container .rendertasks .tasksContainer ul li:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-#adminPanel .main-container .rendertasks ul li span {
+#adminPanel .main-container .rendertasks .tasksContainer ul li span {
   font-weight: 600;
 }
-#adminPanel .main-container .rendertasks ul li strong {
+#adminPanel .main-container .rendertasks .tasksContainer ul li strong {
   color: #007bff;
 }
-#adminPanel .main-container .rendertasks ul li .delete {
+#adminPanel .main-container .rendertasks .tasksContainer ul li .delete {
   background-color: #dc3545;
   color: #ffffff;
   border: none;
@@ -278,12 +266,12 @@
   float: right;
   transform: translateY(-36px);
 }
-#adminPanel .main-container .rendertasks ul li .delete:hover {
+#adminPanel .main-container .rendertasks .tasksContainer ul li .delete:hover {
   background-color: #c82333;
   scale: 1.1;
   transform: translateY(-40px);
 }
-#adminPanel .main-container .rendertasks ul li small {
+#adminPanel .main-container .rendertasks .tasksContainer ul li small {
   display: block;
   margin-top: 10px;
   color: #6c757d;

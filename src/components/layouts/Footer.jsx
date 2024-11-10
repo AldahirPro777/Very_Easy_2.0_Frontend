@@ -3,7 +3,7 @@ import "../../scss/layouts/footer/footer.css";
 function Footer() {
   return (
     <footer id="footer">
-      <p className="version">Versión 2.1.2</p>
+      <p className="version">Versión 3.0.0</p>
 
       {/* <p className="frase">"Frase chida"</p> */}
 

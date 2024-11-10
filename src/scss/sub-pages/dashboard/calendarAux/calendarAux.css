@@ -37,7 +37,7 @@
   background-color: #fff;
 }
 #calendarAux .container .tabla .first-day {
-  grid-column-start: 3;
+  grid-column-start: 6;
 }
 #calendarAux .container .tabla .day-name {
   background-color: #fff;
